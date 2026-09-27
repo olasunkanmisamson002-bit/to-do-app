@@ -1,0 +1,22 @@
+{
+  "name": "todo-list-app",
+  "version": "1.0.0",
+  "description": "Todo list app with projects, built for The Odin Project assignment",
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development --open"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^6.10.0",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.90.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  },
+  "dependencies": {
+    "data-fns": "^1.1.0",
+    "date-fns": "^3.6.0"
+  }
+}

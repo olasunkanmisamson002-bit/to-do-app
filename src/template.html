@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <span class="brand-mark">Tasks</span>
+      </div>
+      <ul id="project-list"></ul>
+      <button id="new-project-btn" type="button">New project</button>
+    </aside>
+
+    <main id="main-content">
+      <header id="content-header">
+        <div>
+          <h2 id="project-title"></h2>
+          <p id="project-meta" class="mono"></p>
+        </div>
+        <button id="new-todo-btn" type="button">New todo</button>
+      </header>
+      <ul id="todo-list"></ul>
+    </main>
+  </div>
+
+  <!-- Todo form dialog -->
+  <dialog id="todo-dialog">
+    <form id="todo-form">
+      <h3 id="todo-form-title">New Todo</h3>
+
+      <label for="todo-title-input">Title</label>
+      <input id="todo-title-input" name="title" type="text" required />
+
+      <label for="todo-desc-input">Description</label>
+      <textarea id="todo-desc-input" name="description"></textarea>
+
+      <label for="todo-duedate-input">Due date</label>
+      <input id="todo-duedate-input" name="dueDate" type="date" required />
+
+      <label for="todo-priority-input">Priority</label>
+      <select id="todo-priority-input" name="priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <label for="todo-notes-input">Notes</label>
+      <textarea id="todo-notes-input" name="notes"></textarea>
+
+      <input type="hidden" id="todo-id-input" name="id" />
+
+      <div class="dialog-actions">
+        <button type="button" id="todo-cancel-btn">Cancel</button>
+        <button type="submit">Save todo</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- New project dialog -->
+  <dialog id="project-dialog">
+    <form id="project-form">
+      <h3>New project</h3>
+      <label for="project-name-input">Project name</label>
+      <input id="project-name-input" name="name" type="text" required />
+      <div class="dialog-actions">
+        <button type="button" id="project-cancel-btn">Cancel</button>
+        <button type="submit">Create project</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>
